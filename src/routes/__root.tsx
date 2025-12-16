@@ -1,25 +1,17 @@
+import CustomCursor from '@/components/Cursor'
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 import { Outlet, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
-
-import Header from '../components/Header'
 
 export const Route = createRootRoute({
   component: () => (
-    <>
-      <Header />
+    <div className="relative min-h-screen bg-white">
+      <div className="pt-20">
+        <Navbar />
+        <CustomCursor />
+      </div>
       <Outlet />
-      <TanStackDevtools
-        config={{
-          position: 'bottom-right',
-        }}
-        plugins={[
-          {
-            name: 'Tanstack Router',
-            render: <TanStackRouterDevtoolsPanel />,
-          },
-        ]}
-      />
-    </>
+      <Footer />
+    </div>
   ),
 })
