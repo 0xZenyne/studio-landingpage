@@ -68,7 +68,6 @@ function App() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-24 bg-white border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
